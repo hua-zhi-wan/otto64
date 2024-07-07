@@ -1,0 +1,15 @@
+{
+  "name": "otto64",
+  "version": "1.0.0",
+  "description": "otto-style-information-encoder/decoder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "otto"
+  ],
+  "type": "module",
+  "author": "hua-zhi-wan",
+  "license": "MIT"
+}
