@@ -57,15 +57,13 @@ function otto64ToBase64(str) {
 export const otto64 = {
     encode(msg) {
         if (typeof msg == 'string') {
-            const base64 = Buffer.from(msg).toString('base64')
-            return base64ToOtto64(base64)
+            return base64ToOtto64(btoa(encodeURIComponent(msg)))
         }
         return undefined
     },
     decode(msg) {
         if (typeof msg == 'string') {
-            const base64 = otto64ToBase64(msg)
-            return Buffer.from(base64, 'base64').toString('utf-8')
+            return decodeURIComponent(atob(otto64ToBase64(msg)));
         }
         return undefined
     }
