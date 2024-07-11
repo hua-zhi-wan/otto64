@@ -1,6 +1,6 @@
 {
   "name": "otto64",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "otto-style-information-encoder/decoder",
   "main": "index.js",
   "scripts": {
