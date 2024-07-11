@@ -1,7 +1,7 @@
 # otto64
 An NPM module that can encode text information into otto-style.
 
-# Usage
+## Usage
 
 ```js
 import otto64 from 'otto64'
