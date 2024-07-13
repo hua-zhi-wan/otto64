@@ -22,6 +22,9 @@ const ottowords = [
 
 const base64charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".split('')
 
+/**
+ * @param {string} raw
+ */
 function base64ToOtto64(raw) {
     const set = new Set(base64charset)
     const ret = []
@@ -36,6 +39,9 @@ function base64ToOtto64(raw) {
     return ret.join('')
 }
 
+/**
+ * @param {string} str
+ */
 function otto64ToBase64(str) {
     const ret = []
     while (str.length > 0) {
@@ -56,17 +62,30 @@ function otto64ToBase64(str) {
     return ret.join('')
 }
 
+/**
+ * A utility object for encoding and decoding messages using the otto64 algorithm.
+ */
 export const otto64 = {
+    /**
+     * Encodes a message using the otto64 algorithm.
+     * @param {string} msg - The message to encode.
+     * @returns {string|undefined} - The encoded message, or undefined if the input is not a string.
+     */
     encode(msg) {
         if (typeof msg == 'string') {
-            return base64ToOtto64(Base64.encode(msg))
+            return base64ToOtto64(Base64.encode(msg));
         }
-        return undefined
+        return undefined;
     },
+    /**
+     * Decodes a message encoded using the otto64 algorithm.
+     * @param {string} msg - The message to decode.
+     * @returns {string|undefined} - The decoded message, or undefined if the input is not a string.
+     */
     decode(msg) {
         if (typeof msg == 'string') {
             return Base64.decode(otto64ToBase64(msg));
         }
-        return undefined
+        return undefined;
     }
 }
