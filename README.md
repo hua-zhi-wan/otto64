@@ -10,6 +10,10 @@
 
 ## 在 node-js 中使用
 
+```sh
+npm i otto64
+```
+
 ```js
 import otto64 from 'otto64'
 
