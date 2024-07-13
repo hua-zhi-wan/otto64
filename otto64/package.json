@@ -1,15 +1,22 @@
 {
   "name": "otto64",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "otto-style-information-encoder/decoder",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "keywords": [
     "otto"
   ],
   "type": "module",
   "author": "hua-zhi-wan",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "js-base64": "^3.7.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
 }

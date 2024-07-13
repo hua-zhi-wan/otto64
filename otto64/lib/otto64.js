@@ -1,3 +1,5 @@
+import { Base64 } from 'js-base64'
+
 const ottowords = [
     '三人', '上不去', '上路', '下不来',
     '不值得', '不配', '东厂', '中单',
@@ -57,13 +59,13 @@ function otto64ToBase64(str) {
 export const otto64 = {
     encode(msg) {
         if (typeof msg == 'string') {
-            return base64ToOtto64(btoa(encodeURIComponent(msg)))
+            return base64ToOtto64(Base64.encode(msg))
         }
         return undefined
     },
     decode(msg) {
         if (typeof msg == 'string') {
-            return decodeURIComponent(atob(otto64ToBase64(msg)));
+            return Base64.decode(otto64ToBase64(msg));
         }
         return undefined
     }
