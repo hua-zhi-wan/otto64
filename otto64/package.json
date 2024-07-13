@@ -2,9 +2,15 @@
   "name": "otto64",
   "version": "0.1.2",
   "description": "otto-style-information-encoder/decoder",
-  "main": "index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
   "scripts": {
-    "build": "webpack"
+    "build": "tsup"
   },
   "keywords": [
     "otto"
@@ -16,7 +22,11 @@
     "js-base64": "^3.7.7"
   },
   "devDependencies": {
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
-  }
+    "publint": "^0.2.8",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
+  },
+  "files": [
+    "dist"
+  ]
 }
